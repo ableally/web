@@ -186,7 +186,7 @@ function next() {
   }
 
 
-  if(points > 10)
+  if(points > 20)
   {
   vals = "Entrepreneur";
   sessionStorage.setItem("vals", vals);
