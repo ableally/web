@@ -38,12 +38,13 @@ Colors:
 /**************************/
 body,
 html {
-    width: 100%;
+	width: 100%;
 	height: 100%;
 }
 
-body, p {
-	color: #6b747b; 
+body,
+p {
+	color: #6b747b;
 	font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 
@@ -165,8 +166,19 @@ a:hover {
 .btn-solid-reg:hover {
 	border: 1px solid #594cda;
 	background-color: transparent;
-	color: #594cda; /* needs to stay here because of the color property of a tag */
+	color: #594cda;
+	/* needs to stay here because of the color property of a tag */
 	text-decoration: none;
+}
+
+#abletestlink {
+
+	color: #594cda;
+
+}
+
+#abletestlink:hover {
+	color: rgb(43, 0, 143);
 }
 
 .btn-solid-lg {
@@ -186,7 +198,8 @@ a:hover {
 .btn-solid-lg:hover {
 	border: 1px solid #594cda;
 	background-color: transparent;
-	color: #594cda; /* needs to stay here because of the color property of a tag */
+	color: #594cda;
+	/* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -209,7 +222,8 @@ a:hover {
 .btn-solid-lg.secondary:hover {
 	border: 1px solid #eb427e;
 	background: transparent;
-	color: #eb427e; /* needs to stay here because of the color property of a tag */
+	color: #eb427e;
+	/* needs to stay here because of the color property of a tag */
 }
 
 .btn-outline-reg {
@@ -289,10 +303,10 @@ a:hover {
 	transition: all 0.2s ease;
 }
 
-.form-control-input:focus + .label-control,
-.form-control-input.notEmpty + .label-control,
-.form-control-textarea:focus + .label-control,
-.form-control-textarea.notEmpty + .label-control {
+.form-control-input:focus+.label-control,
+.form-control-input.notEmpty+.label-control,
+.form-control-textarea:focus+.label-control,
+.form-control-textarea.notEmpty+.label-control {
 	top: 0.125rem;
 	color: #6b747b;
 	opacity: 1;
@@ -302,7 +316,8 @@ a:hover {
 
 .form-control-input,
 .form-control-select {
-	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
+	display: block;
+	/* needed for proper display of the label in Firefox, IE, Edge */
 	width: 100%;
 	padding-top: 1.125rem;
 	padding-bottom: 0.125rem;
@@ -314,7 +329,8 @@ a:hover {
 	font-size: 0.875rem;
 	line-height: 1.875rem;
 	transition: all 0.2s;
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+	-webkit-appearance: none;
+	/* removes inner shadow on form inputs on ios safari */
 }
 
 .form-control-select {
@@ -325,22 +341,24 @@ a:hover {
 }
 
 select {
-    /* you should keep these first rules in place to maintain cross-browser behavior */
-    -webkit-appearance: none;
+	/* you should keep these first rules in place to maintain cross-browser behavior */
+	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    background-image: url('../images/down-arrow.png');
-    background-position: 96% 50%;
-    background-repeat: no-repeat;
-    outline: none;
+	-o-appearance: none;
+	appearance: none;
+	background-image: url('../images/down-arrow.png');
+	background-position: 96% 50%;
+	background-repeat: no-repeat;
+	outline: none;
 }
 
 .form-control-textarea {
-	display: block; /* used to eliminate a bottom gap difference between Chrome and IE/FF */
+	display: block;
+	/* used to eliminate a bottom gap difference between Chrome and IE/FF */
 	width: 100%;
-	height: 14rem; /* used instead of html rows to normalize height between Chrome and IE/FF */
+	height: 14rem;
+	/* used instead of html rows to normalize height between Chrome and IE/FF */
 	padding-top: 1.5rem;
 	padding-left: 1.3125rem;
 	border: 1px solid #d0d5e2;
@@ -356,7 +374,8 @@ select {
 .form-control-select:focus,
 .form-control-textarea:focus {
 	border: 1px solid #a1a1a1;
-	outline: none; /* Removes blue border on focus */
+	outline: none;
+	/* Removes blue border on focus */
 }
 
 .form-control-input:hover,
@@ -409,17 +428,17 @@ input[type='checkbox'] {
 /* animate in */
 .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
 	opacity: 1;
-	-webkit-transform: translateY(0) perspective(37.5rem) rotateX(0); 
-	-ms-transform: translateY(0) perspective(37.5rem) rotateX(0); 
-	transform: translateY(0) perspective(37.5rem) rotateX(0); 
+	-webkit-transform: translateY(0) perspective(37.5rem) rotateX(0);
+	-ms-transform: translateY(0) perspective(37.5rem) rotateX(0);
+	transform: translateY(0) perspective(37.5rem) rotateX(0);
 }
 
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
 	opacity: 0;
-	-webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
-	-ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
-	transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
+	-webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+	-ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+	transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
 }
 
 /* dark overlay, start state */
@@ -432,10 +451,12 @@ input[type='checkbox'] {
 .my-mfp-slide-bottom.mfp-ready.mfp-bg {
 	opacity: 0.8;
 }
+
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing.mfp-bg {
 	opacity: 0;
 }
+
 /* end of fade-move animation for details lightbox - magnific popup */
 
 
@@ -455,7 +476,7 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-    width: 133px;
+	width: 133px;
 	height: 32px;
 }
 
@@ -469,7 +490,8 @@ input[type='checkbox'] {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 3.25rem;
+	/* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -510,16 +532,17 @@ input[type='checkbox'] {
 
 /* Dropdown Menu */
 .navbar .dropdown .dropdown-menu {
-	animation: fadeDropdown 0.2s; /* required for the fade animation */
+	animation: fadeDropdown 0.2s;
+	/* required for the fade animation */
 }
 
 @keyframes fadeDropdown {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -552,6 +575,7 @@ input[type='checkbox'] {
 	border: none;
 	background-color: #d4dce2;
 }
+
 /* end of dropdown menu */
 
 .navbar .app-store-icons {
@@ -789,6 +813,7 @@ input[type='checkbox'] {
 .lightbox-basic .btn-solid-reg.mfp-close:hover {
 	color: #594cda;
 }
+
 /* end of action Button */
 
 /* Back Button */
@@ -810,6 +835,7 @@ input[type='checkbox'] {
 	background-color: #252c38;
 	color: #ffffff;
 }
+
 /* end of back button */
 
 /* Close X Button */
@@ -821,6 +847,7 @@ input[type='checkbox'] {
 	height: 44px;
 	color: #555555;
 }
+
 /* end of close x button */
 
 
@@ -1055,24 +1082,25 @@ input[type='checkbox'] {
 
 /* Best Value Label */
 .cards-2 .card .label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10.625rem;
-    height: 10.625rem;
-    overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10.625rem;
+	height: 10.625rem;
+	overflow: hidden;
 }
 
 .cards-2 .card .label .best-value {
-    position: relative;
+	position: relative;
 	width: 13.75rem;
 	padding: 0.3125rem 0 0.3125rem 4.125rem;
-    background-color: #eb427e;
+	background-color: #eb427e;
 	color: #ffffff;
-    -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
-    -ms-transform: rotate(45deg) translate3d(0, 0, 0);
-    transform: rotate(45deg) translate3d(0, 0, 0);
+	-webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+	-ms-transform: rotate(45deg) translate3d(0, 0, 0);
+	transform: rotate(45deg) translate3d(0, 0, 0);
 }
+
 /* end of best value label */
 
 .cards-2 .decoration-bg {
@@ -1139,7 +1167,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #252c38;
+	color: #252c38;
 	transition: all 0.2s ease;
 }
 
@@ -1153,7 +1181,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-    color: #252c38;
+	color: #252c38;
 }
 
 
@@ -1248,7 +1276,7 @@ a:hover.back-to-top {
 
 /*************************/
 /*     Media Queries     */
-/*************************/	
+/*************************/
 /* Min-width 768px */
 @media (min-width: 768px) {
 
@@ -1256,6 +1284,7 @@ a:hover.back-to-top {
 	.header {
 		padding-top: 9rem;
 	}
+
 	/* end of header */
 
 
@@ -1263,14 +1292,16 @@ a:hover.back-to-top {
 	.ex-basic-1 .text-box {
 		padding: 1.75rem 2rem 0.875rem 2rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 768px */
 
 
 /* Min-width 992px */
 @media (min-width: 992px) {
-	
+
 	/* General Styles */
 	.h2-heading {
 		width: 35.25rem;
@@ -1283,6 +1314,7 @@ a:hover.back-to-top {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of general styles */
 
 
@@ -1322,7 +1354,7 @@ a:hover.back-to-top {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	
+
 	.navbar .nav-item .nav-link {
 		padding-right: 0.625rem;
 		padding-left: 0.625rem;
@@ -1340,6 +1372,7 @@ a:hover.back-to-top {
 	.navbar .app-store-icons {
 		margin-left: 0.875rem;
 	}
+
 	/* end of navigation */
 
 
@@ -1356,6 +1389,7 @@ a:hover.back-to-top {
 		margin-right: 0.5rem;
 		margin-left: 0;
 	}
+
 	/* end of header */
 
 
@@ -1365,6 +1399,7 @@ a:hover.back-to-top {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of introduction */
 
 
@@ -1376,6 +1411,7 @@ a:hover.back-to-top {
 	.basic-2 .text-container {
 		margin-bottom: 0;
 	}
+
 	/* end of details 1 */
 
 
@@ -1383,6 +1419,7 @@ a:hover.back-to-top {
 	.basic-3 .image-container {
 		margin-bottom: 0;
 	}
+
 	/* end of details 2 */
 
 
@@ -1395,6 +1432,7 @@ a:hover.back-to-top {
 		margin-bottom: 0;
 		text-align: left;
 	}
+
 	/* end of details lightbox */
 
 
@@ -1402,6 +1440,7 @@ a:hover.back-to-top {
 	.basic-4 .text-container {
 		margin-bottom: 0;
 	}
+
 	/* end of details 3 */
 
 
@@ -1416,6 +1455,7 @@ a:hover.back-to-top {
 		margin-right: 1rem;
 		margin-left: 1rem;
 	}
+
 	/* end of features */
 
 
@@ -1423,6 +1463,7 @@ a:hover.back-to-top {
 	.counter {
 		padding-top: 5rem;
 	}
+
 	/* end of statistics */
 
 
@@ -1436,12 +1477,13 @@ a:hover.back-to-top {
 		width: 22px;
 		background-size: 22px 34px;
 	}
-	
+
 	.slider-1 .swiper-button-next {
 		right: -16px;
 		width: 22px;
 		background-size: 22px 34px;
 	}
+
 	/* end of testimonials */
 
 
@@ -1457,6 +1499,7 @@ a:hover.back-to-top {
 		margin-right: 0.375rem;
 		margin-left: 0.375rem;
 	}
+
 	/* end of pricing */
 
 
@@ -1477,6 +1520,7 @@ a:hover.back-to-top {
 		margin-right: 0.5rem;
 		margin-left: 0;
 	}
+
 	/* end of conclusion */
 
 
@@ -1486,6 +1530,7 @@ a:hover.back-to-top {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of footer */
 
 
@@ -1502,6 +1547,7 @@ a:hover.back-to-top {
 	.copyright .statement {
 		text-align: right;
 	}
+
 	/* end of copyright */
 
 
@@ -1516,8 +1562,10 @@ a:hover.back-to-top {
 		margin-right: 1rem;
 		margin-left: 1rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 992px */
 
 
@@ -1529,6 +1577,7 @@ a:hover.back-to-top {
 		font-size: 3.125rem;
 		line-height: 3.75rem;
 	}
+
 	/* end of general styles */
 
 
@@ -1546,6 +1595,7 @@ a:hover.back-to-top {
 	.header .image-container {
 		text-align: right;
 	}
+
 	/* end of header */
 
 
@@ -1560,6 +1610,7 @@ a:hover.back-to-top {
 		margin-right: 1.5rem;
 		margin-left: 1.5rem;
 	}
+
 	/* end of features */
 
 
@@ -1571,6 +1622,7 @@ a:hover.back-to-top {
 	.basic-2 .image-container {
 		margin-left: 3.5rem;
 	}
+
 	/* end of details 1 */
 
 
@@ -1582,6 +1634,7 @@ a:hover.back-to-top {
 	.basic-3 .text-container {
 		margin-top: 3.25rem;
 	}
+
 	/* end of details 2 */
 
 
@@ -1589,6 +1642,7 @@ a:hover.back-to-top {
 	.lightbox-basic .image-container {
 		margin-right: 1.5rem;
 	}
+
 	/* end of details lightbox */
 
 
@@ -1600,6 +1654,7 @@ a:hover.back-to-top {
 	.basic-4 .image-container {
 		margin-left: 3.5rem;
 	}
+
 	/* end of details 3 */
 
 
@@ -1613,6 +1668,7 @@ a:hover.back-to-top {
 		font-size: 3.75rem;
 		line-height: 4.25rem;
 	}
+
 	/* end of statistics */
 
 
@@ -1630,6 +1686,7 @@ a:hover.back-to-top {
 		padding-right: 2.5rem;
 		padding-left: 2.5rem;
 	}
+
 	/* end of pricing */
 
 
@@ -1638,6 +1695,7 @@ a:hover.back-to-top {
 		margin-top: 11.5rem;
 		margin-left: 3rem;
 	}
+
 	/* end of conclusion */
 
 
@@ -1650,6 +1708,8 @@ a:hover.back-to-top {
 		margin-right: 2.875rem;
 		margin-left: 2.875rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 1200px */
