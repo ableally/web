@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="wrapper">
+<body onload="myFunction()">
+    <div id="loader"></div>
+    <div class="wrapper" id = "myDiv">
         <div>
            <i  style = "padding: 65px;"class="fas fa-award award_icon"></i>
            <h3 class="username">Based on the Test, <span class="name"></span></h3>
@@ -29,7 +30,13 @@
     <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
 
 <script>
-    // Store
+   function myFunction() {
+  myVar = setTimeout(showPage, 100);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+}
 
 </script>
         <!-- user info -->
