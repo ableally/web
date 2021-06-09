@@ -12,6 +12,6 @@ if (localStorage.getItem != user_points){
 //     localStorage.setItem("score", 0);
 // }
 // localStorage.setItem("score", user_points);
-document.getElementById("result").innerHTML = localStorage.getItem("score");
+// document.getElementById("result").innerHTML = localStorage.getItem("score");
 // document.querySelector("span.time_taken").innerHTML = user_time;
 
