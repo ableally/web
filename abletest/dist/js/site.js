@@ -109,6 +109,18 @@ let questions = [
 
   }
 ];
+// let questions = [
+//   {
+//     id: 1,
+//     question: "	You love connecting with new people all the time? ",
+//     type : 1,
+//   },
+//   {
+//     id: 2,
+//     question: "	You are more of a player on the ground rather than a spectator? ",
+//     type :1,
+//   },
+// ];
 
 let question_count = 0;
 let points = 0;
