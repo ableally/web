@@ -1,45 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AbleTest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AbleTest</title>
 
-    <!-- style.css -->
-    <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <!-- style.css -->
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
+
 <body onload="myFunction()">
-    <div id="loader"></div>
-    <div class="wrapper" id = "myDiv">
-        <div>
-           <i  style = "padding: 65px;"class="fas fa-award award_icon"></i>
-           <h3 class="username">Based on the Test, <span class="name"></span></h3>
-           <h3 class="uservalue">You are better to be an  <span class="vals"></span></h3>
-           <p class="userpoints">Thanks for participating in the Beta Test Programme </p>
-           <!-- <p class="userpoints">Test Data : <span class="points" id = "result"></span></p> -->
-           <!-- <p class="userpoints">Please Share the Test data </p> -->
+  <div id="loader"></div>
+  <div class="wrapper" id="myDiv">
+    <div>
+      <i style="padding: 65px;" class="fas fa-award award_icon"></i>
+      <h3 class="username">Based on the Test, <span class="name"></span></h3>
+      <h3 id="score-result" class="uservalue">You are better to be an <span class="vals"></span></h3>
+      <p class="userpoints" id="userpoints">Thanks for participating in the Beta Test Programme </p>
+      <p class="userpoints">Enter the email to download Certificate. </p>
 
+      <!-- <p class="userpoints">Test Data : <span class="points" id = "result"></span></p> -->
+      <!-- <p class="userpoints">Please Share the Test data </p> -->
+      <form id="submit-form" action="">
+        <div class="name">
+          <input type="hidden" class="name" name="name" id="fname">
+          <label for="email" class="email">Email</label>
+          <input type="text" class="name" name="email" id="femail">
+          <input type="hidden" class="score" name="score" id="fscore">
+          <input type="submit" class ="btn-next" placeholder="Download Certificate" name = "Download">
         </div>
-
-
-
+      </form>
     </div>
-    <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
+  </div>
 
-<script>
-   function myFunction() {
-  myVar = setTimeout(showPage, 100);
-}
+  <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-}
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
 
-</script>
-        <!-- user info -->
-        <script src="dist/js/userInfo.js"></script>
+  <script>
+    function myFunction() {
+      myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+    }
+
+    $("#submit-form").submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwTfiarsi7UJg23Ie2qQnbqjeOAxAYea6HcOZSftYqVqrKfU42S/exec",
+        data: $("#submit-form").serialize(),
+        method: "post",
+        success: function (response) {
+          // alert("Form submitted successfully")
+          downloadScore();
+          // window.location.reload()
+          window.location.href = "https://ableally.tech"
+        },
+        error: function (err) {
+          alert("Something Error")
+
+        }
+      })
+    })
+
+    function downloadScore() {
+      var h1 = document.getElementById("myDiv")
+        var opt = {
+      margin:       1,
+      filename:     'certificate.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: .25 },
+       jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        }
+  html2pdf().set(opt).from(h1).save();
+      html2pdf().from(h1).save();
+    }
+  </script>
+
+  <!-- user info -->
+  <script src="dist/js/userInfo.js"></script>
 </body>
+
 </html>

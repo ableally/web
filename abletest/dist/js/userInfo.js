@@ -3,6 +3,9 @@ let user_points = sessionStorage.getItem("points");
 let user_time = sessionStorage.getItem("time");
 let user_vals = sessionStorage.getItem("vals");
 document.querySelector("span.name").innerHTML = user_name;
+document.getElementById("fname").setAttribute('value',user_name);
+document.getElementById("fscore").setAttribute('value',user_points);
+
 document.querySelector("span.vals").innerHTML = user_vals;
 document.querySelector("span.points").innerHTML = user_points;
 if (localStorage.getItem != user_points){
