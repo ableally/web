@@ -22,6 +22,14 @@ body {
   width: 400px;
 }
 
+input {
+  text-align: center;
+  font-size: large;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
+}
 
 
 .welcome_form input,
