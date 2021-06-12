@@ -19,21 +19,24 @@
   <div id="loader"></div>
   <div class="wrapper" id="myDiv">
     <div>
-      <i style="padding: 65px;" class="fas fa-award award_icon"></i>
+      <i style="padding-left: 120px;" class="fas fa-award award_icon"></i>
       <h3 class="username">Based on the Test, <span class="name"></span></h3>
       <h3 id="score-result" class="uservalue">You are better to be an <span class="vals"></span></h3>
-      <p class="userpoints" id="userpoints">Thanks for participating in the Beta Test Programme </p>
-      <p class="userpoints">Enter the email to download Certificate. </p>
+      <p class="userpoints" id="userpoints" style="padding: 10px;" >Thanks for participating in the Beta Test Programme </p>
+      <!-- <p class="userpoints" style="padding: 10px;">Enter the email to download Certificate. </p> -->
 
       <!-- <p class="userpoints">Test Data : <span class="points" id = "result"></span></p> -->
       <!-- <p class="userpoints">Please Share the Test data </p> -->
       <form id="submit-form" action="">
         <div class="name">
           <input type="hidden" class="name" name="name" id="fname">
-          <label for="email" class="email">Email</label>
-          <input type="text" class="name" name="email" id="femail">
+          <!-- <label for="email" class="email">Email</label>
+          <input type="text" class="form-check-input" name="email" id="femail"> -->
           <input type="hidden" class="score" name="score" id="fscore">
-          <input type="submit" class ="btn-next" placeholder="Download Certificate" name = "Download">
+          <div style ="padding-right:200px;">
+            <input  type="submit" class ="btn-next" placeholder="Download Certificate" value="Click to Return" name = "Download">
+
+          </div>
         </div>
       </form>
     </div>
@@ -60,7 +63,7 @@
         method: "post",
         success: function (response) {
           // alert("Form submitted successfully")
-          downloadScore();
+          //downloadScore();
           // window.location.reload()
           window.location.href = "https://ableally.tech"
         },

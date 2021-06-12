@@ -54,6 +54,12 @@ body {
   transition: 0.4s all;
 }
 
+
+#submit-form{
+
+  padding-left: 200px;
+
+}
 .welcome_form button:hover {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
