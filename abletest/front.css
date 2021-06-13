@@ -23,6 +23,7 @@ body {
 .custom-input{
   border-radius: 9px;
   padding: 4px;
+  width:140px;
   /* border-radius: 20px; */
 }
 
