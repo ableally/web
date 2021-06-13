@@ -33,12 +33,16 @@
           <input type="hidden" class="name" name="name" id="fname">
           <input type="hidden" class="score" name="score" id="fscore">
           <input type="hidden" class="message" name="message" id="fvals">
-          <input required type="text" name="email" autocomplete="email" placeholder="Email" id="ename" minlength="3"
-            maxlength="16" style="padding: 10px;border-radius: 20px;">
+
+          <input required type="email" name="email"  placeholder="Email" id="ename" minlength="3"
+             style="padding: 10px;border-radius: 20px;">
 
           <div style="padding-top: 10px ;padding-right:200px;">
             <input id="submitBtn" type="submit" class="btn-next" placeholder="Download Certificate"
               value="Download Certificate" name="Download">
+              <input type="hidden" class="serial" name="serial" id="serial">
+              <input type="hidden" class="date"  id="date">
+
 
           </div>
         </div>
@@ -55,7 +59,10 @@
     }
 
     function showPage() {
+      generateSerial();
+      console.log('exceuted');
       document.getElementById("loader").style.display = "none";
+
     }
 
     $("#submit-form").submit((e) => {
@@ -76,6 +83,28 @@
         }
       })
     })
+
+
+
+    function generateSerial() {
+    // date = new Date().toString()
+    var nowDate = new Date();
+    var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate()
+    'use strict';
+
+    var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        serialLength = 10,
+        randomSerial = "",
+        i,
+        randomNumber;
+    for (i = 0; i < serialLength; i = i + 1) {
+        randomNumber = Math.floor(Math.random() * chars.length);
+        randomSerial += chars.substring(randomNumber, randomNumber + 1);
+    }
+    document.getElementById('serial').setAttribute('value',randomSerial)
+    document.getElementById('date').setAttribute('value',date)
+
+}
   </script>
 <!-- https://script.google.com/macros/s/AKfycbx0wxNvtofHyUzarVijZdtonF5O5vQrvOkIEbuP5A/exec -->
 <!-- url: "https://script.google.com/macros/s/AKfycbwTfiarsi7UJg23Ie2qQnbqjeOAxAYea6HcOZSftYqVqrKfU42S/exec", -->

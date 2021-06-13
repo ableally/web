@@ -2,6 +2,9 @@ const userName = document.getElementById("fname");
 const submitBtn = document.getElementById("submitBtn");
 const type = document.getElementById("fvals")
 const email = document.getElementById("ename")
+const serial = document.getElementById("serial")
+const date = document.getElementById("date")
+
 
 const {
   PDFDocument,
@@ -10,20 +13,22 @@ const {
 } = PDFLib;
 
 
-const capitalize = (str, lower = false) =>
-  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
-    match.toUpperCase()
-  );
+// const capitalize = (str, lower = false) =>
+//   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
+//     match.toUpperCase()
+//   );
 
 submitBtn.addEventListener("click", () => {
-  const val = capitalize(userName.value);
+  // const val = capitalize(userName.value);
   const value = {
     name: userName.value,
     type: type.value,
-    email: email.value
+    email: email.value,
+    serial:serial.value,
+    date:date.value
   }
   //check if the text is empty or not
-  if (val.trim() !== "" && userName.checkValidity()) {
+  if (value.email.trim() !== "" && email.checkValidity()) {
     // console.log(val);
     generatePDF(value);
   } else {
@@ -46,7 +51,7 @@ const generatePDF = async (name) => {
 
   // Draw a string of text diagonally across the first page
   firstPage.drawText(name.name, {
-    x: 300,
+    x: 230,
     y: 340,
     size: 38,
     // font: Arial,
@@ -63,6 +68,20 @@ const generatePDF = async (name) => {
     x: 350,
     y: 300,
     size: 18,
+    // font: Arial,
+    color: rgb(0.1, 0.08, 0.71),
+  });
+  firstPage.drawText(name.serial, {
+    x: 100,
+    y: 50,
+    size: 10,
+    // font: Arial,
+    color: rgb(0.1, 0.08, 0.71),
+  });
+  firstPage.drawText(name.date, {
+    x: 700,
+    y: 50,
+    size: 10,
     // font: Arial,
     color: rgb(0.1, 0.08, 0.71),
   });
