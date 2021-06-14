@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AbleTest</title>
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="myFunction()">
+  <div id="loader"></div>
+
+
+  <div class="wrapper" id="myDiv">
+    <div class="card">
+      <div class="card_header">
+         <div class="content">
+          <h1 class="username">Congratulations ! </h1>
+      <h3 class="username">Based on the Test, <span class="name"></span></h3>
+
+      <h3 id="score-result" class="uservalue">You are better to be an <span class="vals"></span></h3>
+      <p class="userpoints" id="userpoints" style="padding: 10px;">Thanks for participating in AbleAlly’s AbleTest Programme
+      </p>
+      <p class="userpoints" id="userpoints" style="padding: 10px;">
+      </p>
+      <p class="userpoints" id="userpoints" style="padding: 10px;">Enter Your Mail Address to download certificate.
+      </p>
+         </div>
+         <div class="content-image">
+      </div>
+      </div>
+      <div class="card_info">
+        <h3 class="username"> <span class="namess"></span></h3>
+      </div>
+      <div class="card_footer">
+
+        <form id="submit-form" action="">
+          <div>
+            <input type="hidden" class="name" name="name" id="fname">
+            <input type="hidden" class="score" name="score" id="fscore">
+            <input type="hidden" class="message" name="message" id="fvals">
+  
+            <input required type="email" name="email"  placeholder="Email" id="ename" minlength="3"
+               style="padding: 10px;border-radius: 20px;margin-bottom: 15px;">
+  
+              <input id="submitBtn" type="submit" class="btn-next" placeholder="Download Certificate"
+                value="Download Certificate" name="Download">
+                <input type="hidden" class="serial" name="serial" id="serial">
+                <input type="hidden" class="date"  id="date">
+
+  
+          </div>
+        </form>
+
+      </div>
+
+      <!-- <div class="footer">
+        <p>Designed by AbleAlly </p>
+        <p>All Rights Reserved</p>
+
+      </div> -->
+  </div>
+    <!-- <div>
+      <h1 class="username">Congratulations ! </h1>
+      <h3 class="username">Based on the Test, <span class="name"></span></h3>
+
+      <h3 id="score-result" class="uservalue">You are better to be an <span class="vals"></span></h3>
+      <p class="userpoints" id="userpoints" style="padding: 10px;">Thanks for participating in the Beta Test Programme
+      </p>
+      <p class="userpoints" id="userpoints" style="padding: 10px;">Enter Your Mail Address to download certificate.
+      </p>
+
+      <form id="submit-form" action="">
+        <div>
+          <input type="hidden" class="name" name="name" id="fname">
+          <input type="hidden" class="score" name="score" id="fscore">
+          <input type="hidden" class="message" name="message" id="fvals">
+
+          <input required type="email" name="email"  placeholder="Email" id="ename" minlength="3"
+             style="padding: 10px;border-radius: 20px;">
+
+          <div style="padding-top: 10px ;padding-right:200px;">
+            <input id="submitBtn" type="submit" class="btn-next" placeholder="Download Certificate"
+              value="Download Certificate" name="Download">
+              <input type="hidden" class="serial" name="serial" id="serial">
+              <input type="hidden" class="date"  id="date">
+
+
+          </div>
+        </div>
+      </form>
+
+    </div> -->
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
+
+  <script>
+    function myFunction() {
+      myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+      generateSerial();
+      console.log('exceuted');
+      document.getElementById("loader").style.display = "none";
+
+    }
+
+    $("#submit-form").submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwY9jureNY9klMl9ZsJJ0m2egXR8YpeBxojENzPvNdnl1IVNCv2/exec",
+        data: $("#submit-form").serialize(),
+        method: "post",
+        success: function (response) {
+          // alert("Form submitted successfully")
+          //downloadScore();
+          // window.location.reload()
+          window.location.href = "https://ableally.tech"
+        },
+        error: function (err) {
+          alert("Something Error")
+
+        }
+      })
+    })
+
+
+
+    function generateSerial() {
+    // date = new Date().toString()
+    var nowDate = new Date();
+    var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate()
+    'use strict';
+
+    var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        serialLength = 10,
+        randomSerial = "",
+        i,
+        randomNumber;
+    for (i = 0; i < serialLength; i = i + 1) {
+        randomNumber = Math.floor(Math.random() * chars.length);
+        randomSerial += chars.substring(randomNumber, randomNumber + 1);
+    }
+    document.getElementById('serial').setAttribute('value',randomSerial)
+    document.getElementById('date').setAttribute('value',date)
+
+}
+  </script>
+<!-- https://script.google.com/macros/s/AKfycbx0wxNvtofHyUzarVijZdtonF5O5vQrvOkIEbuP5A/exec -->
+<!-- url: "https://script.google.com/macros/s/AKfycbwTfiarsi7UJg23Ie2qQnbqjeOAxAYea6HcOZSftYqVqrKfU42S/exec", -->
+
+  <!-- user info -->
+  <script src="dist/js/userInfo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.4.0/dist/pdf-lib.min.js"></script>
+  <script src="./FileSaver.js"></script>
+  <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+  <script src="./certificate.js"></script>
+
+
+</body>
+
+</html>
