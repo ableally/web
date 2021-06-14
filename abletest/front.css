@@ -29,7 +29,7 @@ body {
 }
 
 .card {
-  width: 450px;
+  width: 360px;
   user-select: none;
   height: 540px;
   border: 2px solid rgba(255, 255, 255, 0.2);
