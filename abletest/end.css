@@ -237,7 +237,7 @@ input {
   border-radius: 5px;
   /* z-index: 1; */
   overflow: hidden;
-  opacity: 0.85;
+  /* opacity: 0.9; */
 }
 
 .card .card_header

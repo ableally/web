@@ -229,7 +229,7 @@ function show(count) {
 
   question.innerHTML = `
   <h2>Q${count + 1}. ${questions[count].question}</h2>
-   <ul class="option_group">
+   <ul class="option_group" style ="font-size: 14px;">
   <li class="option">${first}</li>
   <li class="option">${second}</li>
   <li class="option">${third}</li>
