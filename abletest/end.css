@@ -320,16 +320,16 @@ input {
 
 }
 
-/* .footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(87, 77, 77);
+  background-color: rgb(83, 83, 83);
   color: white;
   text-align: center;
   opacity: .7;
   font-size: 10px;
-} */
+}
 
 
