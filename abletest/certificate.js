@@ -22,7 +22,7 @@ submitBtn.addEventListener("click", () => {
   // const val = capitalize(userName.value);
   const value = {
     name: userName.value,
-    type: type.value,
+    type: type.value.toUpperCase(),
     email: email.value,
     serial:serial.value,
     date:date.value
@@ -55,35 +55,35 @@ const generatePDF = async (name) => {
     y: 340,
     size: 38,
     // font: Arial,
-    color: rgb(0.1, 0.08, 0.71),
+    color: rgb(0.05, 0.07, .5),
   });
   firstPage.drawText(name.type, {
     x: 270,
     y: 180,
     size: 58,
     // font: Arial,
-    color: rgb(0.1, 0.08, 0.71),
+    color: rgb(0.05, 0.07, .5),
   });
   firstPage.drawText(name.email, {
     x: 350,
     y: 300,
     size: 18,
     // font: Arial,
-    color: rgb(0.1, 0.08, 0.71),
+    color: rgb(0.05, 0.07, .5),
   });
   firstPage.drawText(name.serial, {
     x: 100,
     y: 50,
     size: 10,
     // font: Arial,
-    color: rgb(0.1, 0.08, 0.71),
+    color: rgb(0.05, 0.07, .5),
   });
   firstPage.drawText(name.date, {
     x: 700,
     y: 50,
     size: 10,
     // font: Arial,
-    color: rgb(0.1, 0.08, 0.71),
+    color: rgb(0.05, 0.07, .5),
   });
 
   // Serialize the PDFDocument to bytes (a Uint8Array)
