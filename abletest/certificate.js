@@ -21,7 +21,7 @@ const {
 submitBtn.addEventListener("click", () => {
   // const val = capitalize(userName.value);
   const value = {
-    name: userName.value,
+    name: userName.value.padStart(18),
     type: type.value.toUpperCase(),
     email: email.value,
     serial:serial.value,
@@ -60,14 +60,14 @@ const generatePDF = async (name) => {
   firstPage.drawText(name.type, {
     x: 270,
     y: 180,
-    size: 58,
+    size: 38,
     // font: Arial,
     color: rgb(0.05, 0.07, .5),
   });
   firstPage.drawText(name.email, {
     x: 350,
-    y: 300,
-    size: 18,
+    y: 310,
+    size: 12,
     // font: Arial,
     color: rgb(0.05, 0.07, .5),
   });
