@@ -83,9 +83,9 @@ input {
   background-color: #fff;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
-  position: fixed;
+  /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 
 .quiz_header {
