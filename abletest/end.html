@@ -43,35 +43,42 @@
         <h3 class="username"> <span class="namess"></span></h3>
       </div>
       <div class="card_footer">
+<div>
+  <form id="submit-form" action="">
+    <div>
+      <input type="hidden" class="name" name="name" id="fname">
+      <input type="hidden" class="score" name="score" id="fscore">
+      <input type="hidden" class="message" name="message" id="fvals">
 
-        <form id="submit-form" action="">
-          <div>
-            <input type="hidden" class="name" name="name" id="fname">
-            <input type="hidden" class="score" name="score" id="fscore">
-            <input type="hidden" class="message" name="message" id="fvals">
+      <input required type="email" name="email" placeholder="Email" id="ename" minlength="3"
+        style="padding: 10px;border-radius: 20px;margin-bottom: 15px;">
 
-            <input required type="email" name="email" placeholder="Email" id="ename" minlength="3"
-              style="padding: 10px;border-radius: 20px;margin-bottom: 15px;">
+      <input id="submitBtn" type="submit" class="btn-next" placeholder="Download Certificate"
+        value="Download Certificate" name="Download">
+      <input type="hidden" class="serial" name="serial" id="serial">
+      <input type="hidden" class="date" id="date">
 
-            <input id="submitBtn" type="submit" class="btn-next" placeholder="Download Certificate"
-              value="Download Certificate" name="Download">
-            <input type="hidden" class="serial" name="serial" id="serial">
-            <input type="hidden" class="date" id="date">
+    </div>
+  </form>
+  <div class="break"></div> <!-- break -->
+  <div class="item">
+    <small style ="color: black;">By Clicking Download, You are accepting our Privacy Policy Regarding Data Collection.</small>
 
+  </div>
+</div>
 
-          </div>
-        </form>
 
       </div>
 
-      <div class="footer">
-        <p>Designed by AbleAlly </p>
-        <p>All Rights Reserved</p>
+      <div class="row">
+        <p style ="color: black;font-size: x-small;">By Clicking Download, You are accepting our Privacy Policy Regarding Data Collection.</p>
 
       </div>
     </div>
 
     <div class="footer">
+      <p>click here to Read our Terms & Conditions</p>
+
       <p>Designed By AbleAlly</p>
       <p>All Rights Reserved. </p>
 
