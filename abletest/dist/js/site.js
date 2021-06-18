@@ -211,8 +211,7 @@ function next() {
   //   points += 10;
   //   sessionStorage.setItem("points", points);
   // }
-// console.log(points);
-// console.log(vals)
+
 question_count++;
 show(question_count);
 }
