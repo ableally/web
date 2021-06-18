@@ -138,7 +138,6 @@ function next() {
   if (question_count == questions.length - 1) {
     location.href = "end.html";
   }
-  console.log(question_count);
 
   let user_answer = document.querySelector("li.option.active").innerHTML;
   // check if the answer is right or wrong
@@ -212,8 +211,8 @@ function next() {
   //   points += 10;
   //   sessionStorage.setItem("points", points);
   // }
-console.log(points);
-console.log(vals)
+// console.log(points);
+// console.log(vals)
 question_count++;
 show(question_count);
 }
