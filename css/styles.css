@@ -203,6 +203,32 @@ a:hover {
 	text-decoration: none;
 }
 
+
+
+.btn-secondary-lg {
+	display: inline-block;
+	padding: 1.625rem 2.75rem 1.625rem 2.75rem;
+	border: 3px solid #594cda;
+	border-radius: 32px;
+
+	border: 1px solid #594cda;
+	background-color: transparent;
+	color: #594cda;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-secondary-lg:hover {
+	border: 1px solid #594cda;
+	background-color: #594cda;
+
+	color: #ffffff;
+	/* needs to stay here because of the color property of a tag */
+	text-decoration: none;
+}
 .btn-solid-lg .fab {
 	margin-right: 0.5rem;
 	font-size: 1.25rem;
