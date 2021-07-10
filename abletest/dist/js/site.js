@@ -1,7 +1,7 @@
 let questions = [
   {
     id: 1,
-    question: "	You love connecting with new people all the time? ",
+    question: "	You love connecting with new people most of the time? ",
     type : 1,
   },
   {
@@ -11,12 +11,12 @@ let questions = [
   },
   {
     id: 3,
-    question: "	You are a livewire who cannot sit idle doing nothing most of the time? ",
+    question: "	Are you a livewire who is looking for action most of the time? ",
     type:3
   },
   {
     id: 4,
-    question: "	You are always in search of new ideas and solutions to problems ",
+    question: "	You are in search of new ideas and solutions to problems ",
     type:1
   },
   {
@@ -37,7 +37,7 @@ let questions = [
   },
   {
     id: 8,
-    question: " You are largely a self-driven and self-motivated person who do not need anyone to oversee  you for any work/project you take up  ",
+    question: " You are largely a self-driven and self-motivated person who do not need anyone to oversee you for any work/project you take up  ",
     type:1
   },
   {
@@ -75,7 +75,7 @@ let questions = [
   },
   {
     id: 15,
-    question: "	Risks and challenges excite you  ",
+    question: "	Risks and challenges excites you  ",
     type:1
 
   },
