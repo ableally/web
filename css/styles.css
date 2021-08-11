@@ -638,7 +638,7 @@ input[type='checkbox'] {
 /*****************/
 .header {
 	padding-top: 7rem;
-	padding-bottom: 7rem;
+	padding-bottom: 1rem;
 	background: linear-gradient(rgba(197, 234, 249, 1), rgba(255, 255, 255, 1));
 	text-align: center;
 }
@@ -1610,7 +1610,7 @@ a:hover.back-to-top {
 	/* Header */
 	.header {
 		padding-top: 11rem;
-		padding-bottom: 8rem;
+		padding-bottom: 1rem;
 	}
 
 	.header .text-container {
@@ -1739,3 +1739,54 @@ a:hover.back-to-top {
 }
 
 /* end of min-width 1200px */
+
+.testimonial-1 {
+    background: #fff;
+    padding: 14px;
+    color: #000
+}
+
+.col-md-4 {
+    margin-top: 25px
+}
+
+.name {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: -3px
+}
+
+.place {
+    font-size: 13px;
+    color: #988c8c
+}
+
+.place-2 {
+    font-size: 13px;
+    color: #ffffff
+}
+
+.testimonial-2 {
+	padding-top: 50px;
+    background: #594cda;
+    padding: 14px;
+    color: #fff
+}
+
+.ableTestNow {
+	/* padding-bottom: 30px; */
+	color: white;
+}
+
+#abletestlink2{
+  color:white;
+  text-decoration:none;
+
+}
+
+#abletestlink2:hover
+{
+	color:rgb(250, 242, 242);
+	text-decoration:none;
+  
+  }
