@@ -37,7 +37,7 @@ submitBtn.addEventListener("click", () => {
 });
 
 const generatePDF = async (name) => {
-  const existingPdfBytes = await fetch("https://ableally.tech/abletest/certss.pdf").then((res) =>
+  const existingPdfBytes = await fetch("https://ableally.in/abletest/certss.pdf").then((res) =>
     res.arrayBuffer()
   );
 
