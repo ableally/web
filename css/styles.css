@@ -1609,12 +1609,12 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		padding-top: 11rem;
+		padding-top: 6rem;
 		padding-bottom: 1rem;
 	}
 
 	.header .text-container {
-		margin-top: 10rem;
+		margin-top: 0rem;
 		margin-right: 3rem;
 	}
 
@@ -1789,4 +1789,11 @@ a:hover.back-to-top {
 	color:rgb(250, 242, 242);
 	text-decoration:none;
   
+  }
+
+  .pricing-area-l-17 .single-price {
+	height: 100%;
+	background: #FFFFFF;
+	box-shadow: 0px 42px 54px rgba(0, 0, 0, 0.0939481);
+	border-radius: 6px;
   }
